@@ -786,8 +786,11 @@ sockets, this can also be specified in :file:`{conf_name}.conf`.
 --start-as
 type=choices
 default=normal
-choices=normal,fullscreen,maximized,minimized
-Control how the initial kitty window is created.
+choices=normal,fullscreen,maximized,minimized,floating
+Control how the initial kitty window is created. :option:`{appname} --floating`
+makes the window a floating window, also known as topmost or always-on-top.
+Whether this works and exactly what effect it has depends on the window manager
+/operating system.
 
 
 # Debugging options

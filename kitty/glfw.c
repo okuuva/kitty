@@ -1365,6 +1365,7 @@ change_os_window_state(PyObject *self UNUSED, PyObject *args) {
     if (!w || !w->handle) Py_RETURN_NONE;
     if (strcmp(state, "maximized") == 0) glfwMaximizeWindow(w->handle);
     else if (strcmp(state, "minimized") == 0) glfwIconifyWindow(w->handle);
+    else if (strcmp(state, "floating") == 0) glfwWindowHint(GLFW_FLOATING, true);
     else { PyErr_SetString(PyExc_ValueError, "Unknown window state"); return NULL; }
     Py_RETURN_NONE;
 }
